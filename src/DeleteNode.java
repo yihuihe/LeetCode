@@ -6,7 +6,7 @@ public class DeleteNode {
 	public class ListNode {
 		     int val;
 		     ListNode next;
-		    public ListNode(int x) { val = x; }
+		     public ListNode(int x) { val = x; }
 		  }
 	public static void deleteNode(ListNode node){
 		node.val = node.next.val;
