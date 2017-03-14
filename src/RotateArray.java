@@ -2,6 +2,21 @@
 public class RotateArray {
 
 	public static int[] rotate(int[] nums,int k){
+		if(nums==null || nums.length==0 ||  k<0)
+			return nums;
+		int k_temp = k;
+		if(k_temp>nums.length)
+			k_temp %= nums.length;
+		int[] result= new int[nums.length];
+		for(int i=0; i<k_temp; i++){
+			result[i] = nums[nums.length-k_temp+i];
+		}
+		for(int j=0; j<nums.length-k_temp; j++){
+			result[j+k_temp] = nums[j];
+		}
+		System.arraycopy(result,0,nums,0,nums.length);
+		return nums;
+		/*
 		int nums_length = nums.length;
 		int[] temp = new int[nums_length];
 		int k_receive = k % nums_length; 
@@ -26,6 +41,7 @@ public class RotateArray {
 		}
 		count = 0;
 		return temp;
+		*/
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
