@@ -1,7 +1,38 @@
 
 public class RotateArray {
 
+	public static void reserve(int[] array,int start,int end){
+		if(array==null || array.length == 0 || start<0 || end > array.length-1 )
+			return ;
+		int temp = 0;
+		while(start < end ){
+			temp = array[start];
+			array[start] = array[end];
+			array[end] = temp;
+
+			start++;
+			end--;
+		}
+
+	}
 	public static int[] rotate(int[] nums,int k){
+
+		//方法二
+		if(nums==null || nums.length==0 ||  k<0)
+			return nums;
+		if(k>nums.length)
+			k = k % nums.length;
+		int preLength = nums.length - k;
+
+
+		reserve(nums,0,preLength-1);
+		reserve(nums,preLength,nums.length-1);
+		reserve(nums,0,nums.length-1);
+		return nums;
+
+
+		//方法一改进
+		/******************************************************************
 		if(nums==null || nums.length==0 ||  k<0)
 			return nums;
 		int k_temp = k;
@@ -16,7 +47,10 @@ public class RotateArray {
 		}
 		System.arraycopy(result,0,nums,0,nums.length);
 		return nums;
-		/*
+		 ********************************************************************/
+
+		//方法一
+		/**********************************************************************
 		int nums_length = nums.length;
 		int[] temp = new int[nums_length];
 		int k_receive = k % nums_length; 
@@ -41,7 +75,7 @@ public class RotateArray {
 		}
 		count = 0;
 		return temp;
-		*/
+		***********************************************************************/
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
