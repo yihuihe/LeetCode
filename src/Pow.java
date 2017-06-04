@@ -9,6 +9,7 @@ public class Pow {
             N = -N;
             x = 1 / x;
         }
+
         double ans = 1;
         while (N > 0) {
             if ((N & 1) == 1) ans *= x;
@@ -18,6 +19,6 @@ public class Pow {
         return ans;
     }
     public static void main(String[] args){
-        System.out.println(myPow(2.0,-2147483638));
+        System.out.println(myPow(100,1000));
     }
 }

@@ -1,12 +1,12 @@
 /**
  * Created by hyh on 2017/4/30.
  */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//    TreeNode(int x) { val = x; }
+//}
 public class BinaryTreeTilt {
     private static int sumResult = 0;
     public static int findTilt(TreeNode root) {

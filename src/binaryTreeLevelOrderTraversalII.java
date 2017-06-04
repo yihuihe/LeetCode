@@ -5,6 +5,12 @@ import java.util.Queue;
 /**
  * Created by hyh on 2017/6/1.
  */
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
+}
 public class binaryTreeLevelOrderTraversalII {
     public static ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();

@@ -8,6 +8,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
+
     public  TreeNode buildNode(int[] preorder,int preStart, int preEnd, int[] inorder, int inStart, int inEnd){
         if(preStart > preEnd || inStart > inEnd)
             return null;
@@ -32,6 +33,8 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 
 
     }
+
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         //if(preorder.length==0 || preorder == null || inorder.length == 0　|| inorder == null)
         //  return null;
@@ -43,4 +46,5 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         return  buildNode(preorder,preStart,preEnd,inorder,inStart,inEnd);
 
     }
+
 }

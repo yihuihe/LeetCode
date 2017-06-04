@@ -44,5 +44,7 @@ public class InvertBinaryTree {
         System.out.println(node3.left.val);
         System.out.println(node3.right.val);
 
-    }
+
+
+     }
 }
